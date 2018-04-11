@@ -1,0 +1,58 @@
+server:
+      port: 8099  #配置端口
+      address : localhost
+      session-timeout: 30
+      tomcat.max-threads: 0
+      tomcat.uri-encoding: UTF-8
+
+spring:
+      datasource:
+                  url: jdbc:mysql://localhost:3306/order0?characterEncoding=UTF-8
+                  username: root
+                  password:
+                  driverClassName: com.mysql.jdbc.Driver
+
+
+
+
+mybatis:
+        configLocations: mybatis/mybatis-config.xml
+        mapperLocations: classpath*:mybatis/mapper/*.xml
+        typeAliasesPackage: com.abin.lee.rapid.framework.api.model
+
+
+# LOGGING
+logging:
+        level:
+              root: INFO
+              org:
+                  springframework: INFO
+                  hibernate: INFO
+#        path: F:\\
+#        file: log.log
+              com:
+                  ibatis: INFO
+                  abin:
+                        lee:
+                            sharding:
+                                      dbtable:
+                                              api:
+                                                  mapper: INFO
+
+
+
+
+debug: false
+
+
+
+
+
+
+
+
+
+
+
+
+
